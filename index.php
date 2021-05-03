@@ -1,7 +1,7 @@
 <?php
 
 // Base URL of the website, without trailing slash.
-$base_url = getenv('MWN_BASE_URL') ?: 'https://notes.orga.cat';
+$base_url = getenv('MWN_BASE_URL') ?: 'https://notepad.alidaodao.com';
 
 // Path to the directory to save the notes in, without trailing slash.
 // Should be outside of the document root, if possible.
@@ -9,7 +9,7 @@ $save_path = getenv('MWN_SAVE_PATH') ?: '_tmp';
 
 // Salt for encryption
 $encryption = getenv('MWN_ENCRYPTION') ?: false;
-$salt = getenv('MWN_CRYPTO_SALT') ?: 'c36g0bZfykx254eyzQNZ8SNR0gT78D89';
+$salt = getenv('MWN_CRYPTO_SALT') ?: 'c36g0bZfykx254eyzQNZ8eqeqrqgT78D89';
 
 // Disable caching.
 header('Cache-Control: no-cache, no-store, must-revalidate');
