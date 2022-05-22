@@ -1,11 +1,11 @@
 <?php
 
 // Base URL of the website, without trailing slash.
-$base_url = getenv('MWN_BASE_URL') ?: '';
+$base_url = 'https://notes.orga.cat';
 
 // Path to the directory to save the notes in, without trailing slash.
 // Should be outside of the document root, if possible.
-$save_path = getenv('MWN_SAVE_PATH') ?: '_tmp';
+$save_path = '_tmp';
 
 // Disable caching.
 header('Cache-Control: no-cache, no-store, must-revalidate');
@@ -49,9 +49,9 @@ if (isset($_GET['raw']) || strpos($_SERVER['HTTP_USER_AGENT'], 'curl') === 0 || 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Minimalist Web Notepad (https://github.com/pereorga/minimalist-web-notepad)">
     <title><?php print $_GET['note']; ?></title>
-    <link rel="shortcut icon" href="<?php print $base_url; ?>/favicon.ico">
+    <link rel="icon" href="<?php print $base_url; ?>/favicon.ico" sizes="any">
+    <link rel="icon" href="<?php print $base_url; ?>/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="<?php print $base_url; ?>/styles.css">
 </head>
 <body>
